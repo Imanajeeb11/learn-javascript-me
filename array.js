@@ -33,3 +33,7 @@ console.log(arr[0]+arr[1]+arr[2]); //NaNIma
 arr[0]=2+1;
 arr[1]=function total(){console.log(arr.length);};
 console.log(arr[0]+arr[1]+arr[2]); //3function total(){console.log(arr.length);}Ima
+//arr[1]=total();
+//console.log(arr[0]+arr[1]+arr[2]); //total is not defined
+//arr[1]=function total(){console.log(arr.length);};function total();// we can't call a function in an array item
+//console.log(arr[0]+arr[1]+arr[2]); //
