@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .bgcolor-green{
+            background-color: #1abc9c;
+        }
+        .bgcolor-gray{
+            background-color: #f2f2f2;
+        }
+        body{
+            font-family :Montserrat, sans-serif;
+        }
+        .row{
+            margin:20px;
+        }
+    </style>
+    <script>
+        window.alert("Welcome to my first javascript page");
+        function showHide(){
+            if(document.getElementById('hide-show').innerHTML=="HIDE GREEN SECTION"){
+            document.getElementById('my-block').style.display='none';
+            document.getElementById('hide-show').innerHTML="SHOW GREEN SECTION";
+        }
+        else{
+            document.getElementById('my-block').style.display='block';
+            document.getElementById('hide-show').innerHTML="HIDE GREEN SECTION";
+        }
+    }
+    </script>
+    </head>
+    <body>
+     <div class="row">
+        <button class="btn" style="float:right;" onclick=window.print()>Print this page</button>
+        <button class="btn" style="float:right;margin-right:5px;" onclick="document.write('Oops! Want it back? Refresh Page!')">Hide everything</button><br><br>
+        <!--Hide/Show-->
+        <div class="container bgcolor-gray"><br>
+        <div class="well col-xs-12" onclick="showHide()">
+        <h4 id="hide-show">HIDE GREEN SECTION</h4>
+    </div></div>
+     <!--display current date-->
+        <div id="my-block" class="container bgcolor-green" style="display:block">
+        <h2>My First Javascript Section</h2>
+        <button class="btn btn-primary" type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+            Click me to display current Date and Time
+        </button>
+        <br><br>
+        <p id="demo"></p>
+    </div>
+ 
+    <!--bulb on-off using JS-->   
+    <div class="container bgcolor-gray">
+    <h2>JavaScript can change HTML attribute values.</h2>
+    <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+    <div class="col-xs-4">
+    <center><img id="myImage" src="images/pic_bulboff.gif" style="width:100px">
+    <br><br>
+    </div>
+    <div class="col-xs-8">
+    <br><br>    
+    <button class="btn btn-primary" onclick="document.getElementById('myImage').src='images/pic_bulbon.gif'">Turn on the light</button><br><br>
+    <button class="btn btn-primary" onclick="document.getElementById('myImage').src='images/pic_bulboff.gif'">Turn off the light</button>
+    </center> 
+    </div> 
+    </div>  
+    </div> 
+</body>
+</html>
