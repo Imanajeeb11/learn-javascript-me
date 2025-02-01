@@ -34,7 +34,7 @@ function start() {
   
   stop();
 
-  const val1= stop; //stop is a function so val1 is also a function
+  const val1= stop; //FUNCTION EXPRESSION : stop is a function so val1 is also a function
   console.log("val1-->",val1);
   console.log("typeof-->",typeof(val1)); // function is a function datatype
   const val2=stop();
@@ -43,13 +43,52 @@ function start() {
   console.log(val3);
 
   //way1
-  const move1=function (){console.log("Hello1")};
+  const move1=function (){console.log("Hello1")}; //function expression way to declare a function
   console.log("Move1-->",move1);
 
-  //way2
+  //way2 simple way of function declaration
   function move(){
     console.log("Move-->",move);
     console.log("Hello2");
   }
   move1();
   move();
+
+
+  //IIFE - Immediately Invoked Function expression--> (function a(){})();
+  
+const x = function (){ // this is anonymous function
+  console.log(10);
+  return "Hello";
+};
+
+
+  const move2 = (function (){
+    return "hello";
+  })();
+
+  const myName = (function name1() {
+    return "Hello";
+  })();
+  
+  {
+    function name1() {
+      return "Hello";
+    }
+  
+    const myName = name1();
+  }
+
+
+ {
+  function stop1(){
+    const x = 10; // statement 1
+    return x; // statement 2
+  }   
+  const val21 = stop1();
+}
+
+const val211 = (function stop11(){
+  const x = 10; // statement 1
+  return x; // statement 2
+}  )();
