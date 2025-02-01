@@ -55,7 +55,7 @@ function start() {
   move();
 
 
-  //IIFE - Immediately Invoked Function expression--> (function a(){})();
+//IIFE - Immediately Invoked Function expression--> (function a(){})();
   
 const x = function (){ // this is anonymous function
   console.log(10);
@@ -71,16 +71,16 @@ const x = function (){ // this is anonymous function
     return "Hello";
   })();
   
-  {
+{
     function name1() {
       return "Hello";
     }
   
     const myName = name1();
-  }
+}
 
 
- {
+{
   function stop1(){
     const x = 10; // statement 1
     return x; // statement 2
@@ -89,6 +89,8 @@ const x = function (){ // this is anonymous function
 }
 
 const val211 = (function stop11(){
-  const x = 10; // statement 1
-  return x; // statement 2
+  const x3 = 10; // statement 1
+  return x3; // statement 2
 }  )();
+
+console.log(val211);
