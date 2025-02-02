@@ -129,3 +129,15 @@ const getName1 = (o) => { //this is an arrow function
 }
 //const g = getName1({name:"Hello2"});
 console.log(getName1);
+
+function newfunc(k){
+  return k.model;     //every function returns something, if we will not write return statement it will always return undefined.
+}
+const k1 = newfunc("hello");
+const k2 = newfunc(20);
+const k3 = newfunc([10,20.30]);
+const k4 = newfunc({model:"2025",price:100});
+console.log({k1,k2,k3,k4});
+console.log("hello".x);
+let v=25;
+console.log(v.name);
